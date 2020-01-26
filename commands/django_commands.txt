@@ -1,0 +1,6 @@
+django-admin startproject django_auth . (1)
+django-admin startapp accounts (1)
+
+python3 manage.py migrate
+python3 manage.py runserver
+python3 manage.py createsuperuser
