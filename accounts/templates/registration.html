@@ -1,5 +1,7 @@
 
 {% extends 'base.html' %}
+{% load bootstrap_tags %}
+
 {% block page_title %}Register User
 {% endblock %}
 
@@ -10,7 +12,7 @@ Registration
 <p>If you alredy have an account, you can <a href="{% url 'login' %}">sign in</a> </p>
 
 <form method="POST">
-   {% csrf_token %}{{ registration_form.as_p }}
-<button type="submit">Sign Up</button>
+   {% csrf_token %}{{ registration_form | as_bootstrap}}
+<button type="submit" class="btn btn-primary">Sign Up</button>
  </form>
  {% endblock %}
